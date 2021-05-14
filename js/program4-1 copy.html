@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title> Week 4 CIT 160</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+<script>
+    function addnumbers() {
+	//INPUT - Get two numbers from two different input boxes - x and y
+	let x = parseFloat(document.getElementById("number1").value);
+	let y = parseFloat(document.getElementById("number2").value);
+	//PROCESSING - add the two numbers together store in sum
+	let sum = x + y;
+	//OUTPUT - Display sum on the document
+	document.getElementById("output").innerHTML =
+		"The sum of " + x + " and " + y + " equals " + sum + "!";
+}
+</script>
+</head>
+
+<body>
+    <header>
+        <h1>Week 4: Add Two Numbers</h1>
+        <h2>Kimberly Lancaster</h2>
+    </header>
+    <main>
+        <h3>Add Two Numbers</h3>
+        <label>Enter Number One: <input type="text" id="number1"></label>
+      <label>Enter Number Two: <input type="text" id="number2"></label>
+        <label><button onclick="addnumbers()">Add Numbers</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+</main>
+<footer>
+	&copy;2021 &bull; Kimberly Lancaster &bull; BYU-Idaho &bull; CIT 160
+</footer>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
