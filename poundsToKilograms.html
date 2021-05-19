@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Template for CIT 160</title>
+    <link rel="stylesheet" href="css">
+    <script>
+        function twodec() {
+            //INPUT - get a real number from the x textbox and assign it to the variable number
+            let num = parseFloat(document.getElementById('x').value);
+            // PROCESSING - convert using the built in tofixed method\
+            let result = num.toFixed(2);
+            //OUTPUT - display result to the paragraph OUTPUT
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Week 5: Convert Pounds to Kilograms</h1>
+        <h2>Kimberly Lancaster</h2>
+    </header>
+    <main>
+        <h3>Convert Pounds to Kilograms</h3>
+        <label>Pounds: <input type="text" id="input1"></label>
+        <label><button onclick="functionname()">Convert</button></label>
+        <hr>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
