@@ -12,7 +12,7 @@
             //INPUT - Read the number of pounds from the user
             let num = parseFloat(document.getElementById('num').value);
             // PROCESSING - Convert what the user typed into a number
-            let result = 'num' * 0.453592;
+            let result = num * 0.453592;
             //OUTPUT - Display the converted pounds to Kilogrms to the user
            document.getElementById('output').innerHTML = result;
         }
@@ -29,7 +29,7 @@
         <button type="button" onclick="PoundstoKilo()">Convert</button>
         <div id="KilogramsDiv"></div>
         <hr />
-        <p id="ConOutput"></p>
+        <p id="output"></p>
     </main>
     <footer>
         &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
