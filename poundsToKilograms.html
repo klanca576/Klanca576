@@ -7,17 +7,17 @@
     <title> Week 5 CIT 160</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        function twodec() {
-            //INPUT - get a real number from the x textbox and assign it to the variable number
-            let num = parseFloat(document.getElementById('x').value);
-            // PROCESSING - convert using the built in tofixed method\
-            let result = num.toFixed(2);
-            //OUTPUT - display result to the paragraph OUTPUT
-            document.getElementById('output').innerHTML = result;
+
+        function PoundstoKilo() {
+            //INPUT - Read the number of pounds from the user
+            let num = parseFloat(document.getElementById('num').value);
+            // PROCESSING - Convert what the user typed into a number
+            let result = 'num' * 0.453592;
+            //OUTPUT - Display the converted pounds to Kilogrms to the user
+           document.getElementById('output').innerHTML = result;
         }
     </script>
 </head>
-
 <body>
     <header>
         <h1>Week 5: Convert Pounds to Kilograms</h1>
@@ -25,18 +25,15 @@
     </header>
     <main>
         <h3>Convert Pounds to Kilograms</h3>
-        <label>Pounds: <input type="text" id="input1"></label>
-        <label><button onclick="functionname()">Convert</button></label>
-        <hr>
-        <p id="output"></p>
+        <label>Number of Pounds: <input type="text" id="num"></label><br />
+        <button type="button" onclick="PoundstoKilo()">Convert</button>
+        <div id="KilogramsDiv"></div>
+        <hr />
+        <p id="ConOutput"></p>
     </main>
     <footer>
         &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
     </footer>
-    <script>
-
-    </script>
-
 </body>
 
 </html>
