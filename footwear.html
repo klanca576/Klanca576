@@ -6,33 +6,6 @@
     <meta name="viewpoint" content="width=device-width, initial scale=1.0">
     <title> Week 6 CIT 160</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-
-        function WeaShoe() {
-            //INPUT - Read the weather the user inputted
-            let Rain = parseFloat(document.getElementById('R').value); 
-            let Hot = parseFloat(document.getElementById('H').value);
-            let Snow = document.getElementById('S').value;
-	        let Unknown = parseFloat(document.getElementById('U').value);
-         // PROCESSING - Calculate which shoes whould be worn for different weather
-            switch (answer) {
-            case'R':
-            answer = Galoshes;
-            break;
-            case'H':
-            answer = Sandals;
-            break;
-            case'S':
-            answer = Boots;
-            break;
-
-        }
-           }
-           let answer = parseFloat(document.getElementById('output').value);
-
-                //OUTPUT - Display the shoes the user should use based on their weather
-           document.getElementById('output').innerHTML =  "You should wear" + answer + "!"
-    </script>
 </head>
 <body>
     <header>
@@ -51,12 +24,42 @@
             <option value="U">Unknown</option>
         </select>
         <button type="button" onclick="WeaShoe()"> Which Shoes</button>
-        <div id= "output"></div>
-        <hr>
+        <div id= "WeaShoeDiv"></div>
+        <hr />
+        <p id="ShoeA"></p>
     </main>
     <footer>
         &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
     </footer>
+    <script>
+
+        function WeaShoe() {
+            //INPUT - Read the weather the user inputted
+            let Rain = parseFloat(document.getElementById('Rn').value); 
+            let Hot = parseFloat(document.getElementById('Ht').value);
+            let Snow = document.getElementById('Sw').value;
+	        let Unknown = parseFloat(document.getElementById('Un').value);
+         // PROCESSING - Calculate which shoes whould be worn for different weather
+            switch (answer) {
+            case'Rn':
+            answer = Galoshes;
+            break;
+            case'Ht':
+            answer = Sandals;
+            break;
+            case'Sw':
+            answer = Boots;
+            break;
+            case'Un':
+            answer = Boots;
+            break;
+        }
+           }
+           let shoeA = parseFloat(document.getElementById('output').value);
+
+                //OUTPUT - Display the shoes the user should use based on their weather
+           document.getElementById('output').innerHTML =  "You should wear" + shoeA + "!"
+    </script>
 </body>
 
 </html>
