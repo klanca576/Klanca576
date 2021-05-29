@@ -11,18 +11,28 @@
         function WeaShoe() {
             //INPUT - Read the weather the user inputted
             let Rain = parseFloat(document.getElementById('R').value); 
-            let Hot = parseFloat(document.getElementById("H").value);
-            let Snow = document.getElementById("S").value;
-	        let Unknown = parseFloat(document.getElementById("U").value);
+            let Hot = parseFloat(document.getElementById('H').value);
+            let Snow = document.getElementById('S').value;
+	        let Unknown = parseFloat(document.getElementById('U').value);
             let answer = parseFloat(document.getElementById('output').value);
-            // PROCESSING - Calculate which shoes whould be worn for different weather
-            if R = "Galoshes";
-            if H = "Sandals";
-            if S = "boots";
-            if U = "Shoes";
-            //OUTPUT - Display the shoes the user should use based on their weather
-           document.getElementById('output').innerHTML = result;
+         // PROCESSING - Calculate which shoes whould be worn for different weather
+            switch (answer) {
+            case'R':
+            answer = Galoshes;
+            break;
+            case'H':
+            answer = Sandals;
+            break;
+            case'S':
+            answer = Boots;
+            break;
+
         }
+           }
+           let answer = parseFloat(document.getElementById('output').value);
+
+                //OUTPUT - Display the shoes the user should use based on their weather
+           document.getElementById('output').innerHTML =  "You should wear" + answer + "!"
     </script>
 </head>
 <body>
@@ -32,11 +42,18 @@
     </header>
     <main>
         <h3>Weather Shoes</h3>
-        <label>Weather: <input type="text" id="num"></label><br />
-        <button type="button" onclick="WeaShoe()">Answer</button>
-        <div id="WeaShoeDiv"></div>
-        <hr />
-        <p id="output"></p>
+        <label for="pet-select">Weather:</label>
+
+        <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="H">Hot</option>
+            <option value="R">Rain</option>
+            <option value="S">Snow</option>
+            <option value="U">Unknown</option>
+        </select>
+        <button type="button" onclick="WeaShoe()"> Which Shoes</button>
+        <div id= "output"></div>
+        <hr>
     </main>
     <footer>
         &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
