@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Volume of Round Cylinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculate The Volume of A Round Cylinder</h1>
+        <h2>Kimberly Lancaster</h2>
+    </header>
+    <main>
+        <h3>Calculate Volume of Round Cylinder</h3>
+        <label>Radius: <input type="text" id="num1"></label>
+        <label>Height: <input type="text" id="num2"></label>
+        <label><button type="button" onclick="VolOfCyl()">Calculate</button></label>
+        <hr>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+  function VolOfCyl() {
+            //INPUT - Read the area and height inputted by the user
+            let R = parseFloat(document.getElementById("num1").value);
+	        let H = parseFloat(document.getElementById("num2").value);
+            // PROCESSING - Multiply the area and height which was inputted, calculate the volume of the round cylinder
+           let A = Math.PI * R * R;
+            let result = (A * H).toFixed(2);
+            //OUTPUT - Display the amount of pay to the user
+           document.getElementById('output').innerHTML = "The total volume of the round cylinder is " + result + "!";
+        }
+    </script>
+
+</body>
+
+</html>

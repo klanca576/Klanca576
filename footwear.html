@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title> Week 6 CIT 160</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+
+        function WeaShoe() {
+            //INPUT - Read the weather the user inputted
+            let Rain = parseFloat(document.getElementById('R').value); 
+            let Hot = parseFloat(document.getElementById("H").value);
+            let Snow = document.getElementById("S").value;
+	        let Unknown = parseFloat(document.getElementById("U").value);
+            let answer = parseFloat(document.getElementById('output').value);
+            // PROCESSING - Calculate which shoes whould be worn for different weather
+            if R = "Galoshes";
+            if H = "Sandals";
+            if S = "boots";
+            if U = "Shoes";
+            //OUTPUT - Display the shoes the user should use based on their weather
+           document.getElementById('output').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Week 6: Weather Shoes</h1>
+        <h2>Kimberly Lancaster</h2>
+    </header>
+    <main>
+        <h3>Weather Shoes</h3>
+        <label>Weather: <input type="text" id="num"></label><br />
+        <button type="button" onclick="WeaShoe()">Answer</button>
+        <div id="WeaShoeDiv"></div>
+        <hr />
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+
+</html>

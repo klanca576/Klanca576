@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Week 6: Simple Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script>
+  function CaluDif() {
+            //INPUT - Input the two numbers, the operator, and the user's answer
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let operator = document.getElementById("operator").value;
+	        let num2 = parseFloat(document.getElementById("num2").value);
+            let answer = parseFloat(document.getElementById('answer').value);
+            let message = 'Incorrect';
+            let answerkey = 0;
+
+            // PROCESSING - If the answer is the correct answer then we change the message to show it is correct
+        switch (operator) {
+            case'+':
+            answerkey = num1 + num2;
+            break;
+            case'-':
+            answerkey = num1 - num2;
+            break;
+            case'/':
+            answerkey = num1 / num2
+            break;
+            case '*':
+             answerkey = num1 * num2;
+             break;
+             default: let message = 'You need to enter a valid operator!'
+
+        }
+           }
+            if ("operator" == '+') {
+                answerkey = num1 + num2;
+             } else if ("operator" == '-') {
+                answerkey = num1 - num2;
+            } else if ("operator" == '/') {
+                answerkey = num1 / num2;
+            } else if ("operator" == '*') {
+                answerkey = num1 * num2 ;
+            } else {
+                message = "You must enter a valid operator";
+            }
+           let answerkey = 0;
+           if (answerkey == 'answer') {
+              let message = 'Correct!';
+           }
+
+            //OUTPUT - Display the answer to the user
+           document.getElementById('output').innerHTML = answer;
+    </script>
+ <header>
+    <h1>Simple Calculator</h1>
+    <h2>Kimberly Lancaster</h2>
+</header>
+<main>
+    <h3>Simple Calculator</h3>
+    <label>Number One: <input type="text" id="num1"></label>
+    Operator: <input type= "text" id="operator" /><br />
+    <label>Number Two: <input type="text" id="num2"></label>
+    Answer: <input type= "text" id="answer" /><br />
+    <button type="button" onclick="CaluDif()"> Check Math</button>
+    <div id= "answer"></div>
+    <hr>
+</main>
+<footer>
+    &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
+</footer>
+</body>
+
+</html>

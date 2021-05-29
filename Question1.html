@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1.0">
+    <title>Employee Pay After Tax</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculate Employee's After Tax Pay</h1>
+        <h2>Kimberly Lancaster</h2>
+    </header>
+    <main>
+        <h3>Calculate Pay After Tax</h3>
+        <label>Regular hours: <input type="text" id="num1"></label>
+        <label>Overtime hours: <input type="text" id="num2"></label>
+        <label><button type="button" onclick="PayafterTax()">Calculate</button></label>
+        <hr>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Kimberly M Lancaster &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+  function PayafterTax() {
+            //INPUT - Read the number of regular and overtime hours worked by the employee
+            let R = parseFloat(document.getElementById("num1").value);
+	        let O = parseFloat(document.getElementById("num2").value);
+            // PROCESSING - Convert the numbers of hours worked by employee, and calculate final pay
+            let num1 = R * 15;
+            let num2 = O * 22.50;
+            let result = (R * 15 + 22.50 * O).toFixed(2);
+            //OUTPUT - Display the amount of pay to the user
+           document.getElementById('output').innerHTML = "The pay after tax equals $" + result + "!";
+        }
+    </script>
+
+</body>
+
+</html>
